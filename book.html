@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Laundry Pickup | CampusFold</title>
+  <meta name="description" content="Choose a service, collection date, area and time window. A local laundry partner confirms your request before collection.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">CAMPUSFOLD</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="nav-toggle-label">Menu</span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="book.html" aria-current="page">Book a Pickup</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="container">
+      <h1>Request a collection</h1>
+      <p class="sub">This demonstration form does not submit real customer data.</p>
+
+      <div class="book-grid">
+        <div>
+          <form class="form-card" id="pickup-form" aria-label="Request a collection">
+            <div class="form-grid">
+              <div class="field">
+                <label for="service">Laundry service</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="wash-fold">Wash &amp; Fold</option>
+                  <option value="bedding-linen">Bedding and Linen</option>
+                  <option value="express">Express Request</option>
+                </select>
+                <span class="error-msg">Please choose a service.</span>
+              </div>
+              <div class="field">
+                <label for="date">Preferred collection date</label>
+                <input type="date" id="date" name="date" required>
+                <span class="error-msg">Please choose a date.</span>
+              </div>
+              <div class="field">
+                <label for="area">Collection area</label>
+                <input type="text" id="area" name="area" placeholder="Enter broad area only" autocomplete="off" maxlength="60" aria-describedby="area-hint" data-broad-area required>
+                <span class="hint" id="area-hint">A town or district is enough, for example "Leeds city centre". Please do not enter a street address or postcode.</span>
+                <span class="error-msg">Please enter a broad area.</span>
+              </div>
+              <div class="field">
+                <label for="time">Preferred time</label>
+                <select id="time" name="time" required>
+                  <option value="">Choose a time window</option>
+                  <option value="morning">Morning (8am to 12pm)</option>
+                  <option value="afternoon">Afternoon (12pm to 5pm)</option>
+                  <option value="evening">Evening (5pm to 8pm)</option>
+                </select>
+                <span class="error-msg">Please choose a time window.</span>
+              </div>
+            </div>
+            <div class="field full check-field">
+              <div class="check-row">
+                <input type="checkbox" id="partner-confirm" name="partner-confirm" required>
+                <label for="partner-confirm">I understand this request is only confirmed once a laundry partner replies to me.</label>
+              </div>
+              <span class="error-msg">Please tick the box to continue.</span>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Continue request &rarr;</button>
+            </div>
+            <p class="demo-note">Prototype only. Nothing you enter is sent or stored.</p>
+          </form>
+
+          <div class="result" id="pickup-result" tabindex="-1" role="status" aria-live="polite">
+            <h3>Request received (demonstration)</h3>
+            <p>Thank you. Your request has not been sent to anyone, and it is not confirmed. A real laundry partner would need to reply before any collection is booked.</p>
+            <dl></dl>
+            <p class="demo-note">No data was sent or stored. Reloading this page clears everything.</p>
+          </div>
+        </div>
+
+        <aside class="side-card" aria-labelledby="next-title">
+          <p class="eyebrow" id="next-title">What happens next?</p>
+          <ol>
+            <li>Send an enquiry</li>
+            <li>Partner checks capacity</li>
+            <li>Confirm options and price</li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">CAMPUSFOLD &middot; Proposed student laundry collection coordination platform</p>
+      <p class="privacy-note">CampusFold is a student prototype. The booking and enquiry forms only preview your details in the browser: nothing is sent or stored, and the site sets no cookies. A live service would collect only the data needed to arrange a collection, publish a privacy notice under UK GDPR and ask consent before any non-essential cookies (ICO, 2026).</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

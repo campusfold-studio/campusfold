@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact and Support | CampusFold</title>
+  <meta name="description" content="Answers on service areas, collection and pricing, plus an enquiry form for anything else about CampusFold.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html">CAMPUSFOLD</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="nav-toggle-label">Menu</span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="book.html">Book a Pickup</a></li>
+        <li><a href="support.html" aria-current="page">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="container">
+      <h1>Contact &amp; support</h1>
+      <p class="sub">Questions about a service? Find information below.</p>
+
+      <div class="contact-grid">
+        <section class="faq-card" aria-labelledby="faq-title">
+          <h2 id="faq-title">Frequently asked questions</h2>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-1">
+              <span>Where could the service operate?</span><span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-1">CampusFold is a proposal. It would aim to work around university halls and shared student housing, with coverage depending on local laundry partners.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-2">
+              <span>How would collection be arranged?</span><span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-2">A student would choose a service, request a collection window, and a partner would confirm availability, options and price.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-3">
+              <span>How would pricing work?</span><span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-3">This prototype does not show fixed prices. Final charges would be confirmed by the laundry partner after they check your service and collection details, before anything is booked.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-4">
+              <span>How can I request assistance?</span><span class="plus" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a" id="faq-4">Use the enquiry form on this page to choose a topic and describe your question. In this prototype the form only previews your message and sends nothing.</div>
+          </div>
+        </section>
+
+        <section class="enquiry-card" aria-labelledby="enq-title">
+          <h2 id="enq-title">Send an enquiry</h2>
+          <form id="enquiry-form" aria-label="Send an enquiry">
+            <div class="field">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="">Choose a subject</option>
+                <option value="services">Services and service area</option>
+                <option value="booking">Booking and collection</option>
+                <option value="pricing">Pricing</option>
+                <option value="assistance">Help with a request</option>
+                <option value="partners">Laundry partners</option>
+                <option value="other">Something else</option>
+              </select>
+              <span class="error-msg">Please choose a subject.</span>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Type your message" required></textarea>
+              <span class="error-msg">Please type a message.</span>
+            </div>
+            <button class="btn" type="submit">Preview enquiry</button>
+            <p class="demo-note">Prototype only. Nothing is sent.</p>
+          </form>
+
+          <div class="result" id="enquiry-result" tabindex="-1" role="status">
+            <h3>Enquiry preview</h3>
+            <dl></dl>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-brand">CAMPUSFOLD &middot; Proposed student laundry collection coordination platform</p>
+      <p class="privacy-note">CampusFold is a student prototype. The booking and enquiry forms only preview your details in the browser: nothing is sent or stored, and the site sets no cookies. A live service would collect only the data needed to arrange a collection, publish a privacy notice under UK GDPR and ask consent before any non-essential cookies (ICO, 2026).</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
